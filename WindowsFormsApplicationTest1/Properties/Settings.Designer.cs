@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApplicationTest1.Properties
+namespace PlantWatererMonitor.Properties
 {
 
 
