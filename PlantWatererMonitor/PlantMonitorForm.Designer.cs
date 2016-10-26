@@ -33,7 +33,7 @@
             this.labelHumidityValue = new System.Windows.Forms.Label();
             this.buttonWaterPlant = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.connectingLabel = new System.Windows.Forms.Label();
+            this.pumpOffButton = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,18 +52,19 @@
             this.labelHumidityValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHumidityValue.AutoSize = true;
             this.labelHumidityValue.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHumidityValue.Location = new System.Drawing.Point(279, 3);
+            this.labelHumidityValue.Location = new System.Drawing.Point(278, 3);
             this.labelHumidityValue.Margin = new System.Windows.Forms.Padding(3);
             this.labelHumidityValue.Name = "labelHumidityValue";
             this.labelHumidityValue.Size = new System.Drawing.Size(71, 28);
             this.labelHumidityValue.TabIndex = 1;
             this.labelHumidityValue.Text = "100%";
+            this.labelHumidityValue.Click += new System.EventHandler(this.labelHumidityValue_Click);
             // 
             // buttonWaterPlant
             // 
             this.buttonWaterPlant.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonWaterPlant.Font = new System.Drawing.Font("Gadugi", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonWaterPlant.Location = new System.Drawing.Point(111, 171);
+            this.buttonWaterPlant.Location = new System.Drawing.Point(111, 62);
             this.buttonWaterPlant.Name = "buttonWaterPlant";
             this.buttonWaterPlant.Size = new System.Drawing.Size(126, 36);
             this.buttonWaterPlant.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.connectingLabel);
+            this.mainPanel.Controls.Add(this.pumpOffButton);
             this.mainPanel.Controls.Add(this.labelHumidity);
             this.mainPanel.Controls.Add(this.buttonWaterPlant);
             this.mainPanel.Controls.Add(this.labelHumidityValue);
@@ -81,32 +82,30 @@
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(353, 210);
+            this.mainPanel.Size = new System.Drawing.Size(352, 101);
             this.mainPanel.TabIndex = 3;
             // 
-            // connectingLabel
+            // pumpOffButton
             // 
-            this.connectingLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.connectingLabel.AutoSize = true;
-            this.connectingLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.connectingLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.connectingLabel.Enabled = false;
-            this.connectingLabel.Font = new System.Drawing.Font("Gadugi", 18F);
-            this.connectingLabel.Location = new System.Drawing.Point(96, 78);
-            this.connectingLabel.Name = "connectingLabel";
-            this.connectingLabel.Size = new System.Drawing.Size(152, 30);
-            this.connectingLabel.TabIndex = 3;
-            this.connectingLabel.Text = "Connecting...";
+            this.pumpOffButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pumpOffButton.Font = new System.Drawing.Font("Gadugi", 14F);
+            this.pumpOffButton.Location = new System.Drawing.Point(7, 62);
+            this.pumpOffButton.Name = "pumpOffButton";
+            this.pumpOffButton.Size = new System.Drawing.Size(98, 36);
+            this.pumpOffButton.TabIndex = 3;
+            this.pumpOffButton.Text = "Pump Off";
+            this.pumpOffButton.UseVisualStyleBackColor = true;
+            this.pumpOffButton.Click += new System.EventHandler(this.pumpOffButton_Click);
             // 
-            // Form1
+            // PlantMonitorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 210);
+            this.ClientSize = new System.Drawing.Size(352, 101);
             this.Controls.Add(this.mainPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(272, 140);
-            this.Name = "Form1";
+            this.MinimumSize = new System.Drawing.Size(368, 140);
+            this.Name = "PlantMonitorForm";
             this.Text = "Plant Waterer Monitor";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
@@ -120,7 +119,7 @@
         private System.Windows.Forms.Label labelHumidityValue;
         private System.Windows.Forms.Button buttonWaterPlant;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Label connectingLabel;
+        private System.Windows.Forms.Button pumpOffButton;
     }
 }
 

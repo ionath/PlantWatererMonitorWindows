@@ -67,7 +67,7 @@ namespace PlantWatererMonitor
 
             try
             {
-                ioContext.IPs = Dns.EndGetHostEntry(ar);
+                ioContext.IPs = Dns.EndResolve(ar);
 
                 returnState.successful = true;
                 returnState.resolvedIPs = ioContext.IPs;
@@ -94,7 +94,7 @@ namespace PlantWatererMonitor
             GetHostEntryFinished.Reset();
             ResolveState ioContext = new ResolveState(hostname, callback);
 
-            Dns.BeginGetHostEntry(ioContext.host,
+            Dns.BeginResolve(ioContext.host,
                 new AsyncCallback(GetHostEntryCallback), ioContext);
         }
 
